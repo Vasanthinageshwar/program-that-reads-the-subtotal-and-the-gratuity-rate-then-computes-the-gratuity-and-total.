@@ -1,0 +1,24 @@
+Write a program that reads the subtotal and the
+gratuity rate, then computes the gratuity and total. For example, if the user enters 10
+for subtotal and 15% for gratuity rate, the program displays $1.5 as gratuity and $11.5
+as total. Here is a sample run:
+Enter subtotal and gratuity rate : 10 15
+The gratuity is $1.5 and total is $11.5
+
+CODE:
+import java.util.Scanner;
+
+public class Q3 {
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+System.out.print(&quot;Enter your subtotal and the gratuity rate: &quot;);
+double subtotal = sc.nextDouble();
+double percentgrat = sc.nextDouble();
+double gratuity = subtotal * (percentgrat / 100);
+double total = subtotal + gratuity;
+
+System.out.printf(&quot;The gratuity is: $%.2f and the total including gratuity is: $&quot; + total, gratuity);
+}
+
+}
